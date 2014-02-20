@@ -13,27 +13,26 @@ int main(int argc, char *argv[]){
 		cout << "Usage: " << argv[0] << " <Input filename>" << endl; 
 	else {
 		ifstream inFile (argv[1]);
-		stringstream buffer;
 		ofstream outFile;
+		stringstream buffer;
 	
 		if(inFile.is_open()){
-			cout << "** File accepted **" << endl;
 			buffer << inFile.rdbuf();
 			line = buffer.str();
 			//Cursors for array
 			size_t pos0 = 0;
 			size_t pos1;
 			
+			outFile.open("output.txt");
+			outFile << "c This file has had the Unit Clause Propagation applied to it" << endl;
 			string clause[3]; //Array to store clauses
 			for (int i=0; i<=(clauseCount); i++) {
 				pos1 = line.find("0", pos0); //Searches for the 0 at the end of the line
 				clause[i] = line.substr(pos0, (pos1 -pos0)); //Substring each clause minus 0
-				cout << clause[i];
+				outFile << clause[i];
 				pos0 = pos1+1;
 			}
-			cout << endl;
-			cout << endl <<"End of file" << endl;
-			
+			outFile.close();
 		} else {
 			cout << "No good" << endl;
 		}
