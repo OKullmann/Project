@@ -2,18 +2,18 @@
 #include <fstream>
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
 	string line;
 	
-	if (argc !=2)
-		cout << "Usage: " << argv[0] << " <Input filename>" << endl; //Error for wrong input
+	if (argc !=2) //If no file is entered for input
+		cout << "Usage: " << argv[0] << " <Input filename>" << endl; 
 	else {
 		ifstream inFile (argv[1]);
 	
-		if(inFile.is_open())
-			cout << "file accepted" << endl;
-			line = inFile.getline(1);
-		else {
+		if(inFile.is_open()){
+			cout << "** File accepted **" << endl;
+			cout << inFile.rdbuf() << endl; //Prints file contents to terminal
+		} else {
 			cout << "No good" << endl;
 		}
 	}
