@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <cstdlib>
 
 int main(const int argc, const char* const argv[]) {
   std::string line;
@@ -18,8 +19,8 @@ int main(const int argc, const char* const argv[]) {
     if(inFile.is_open()) {
       buffer << inFile.rdbuf();
       line = buffer.str();
-      size_t pos0 = 0;
-      size_t pos1;
+      std::size_t pos0 = 0;
+      std::size_t pos1;
 
       outFile.open("output.txt");
       std::cout << " ** FILE ** " << std::endl;
