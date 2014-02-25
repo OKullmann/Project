@@ -30,22 +30,22 @@ int main(const int argc, const char* const argv[]) {
       std::cout << " ** FILE ** \n";
       std::string clause[255];
       for (int i = 0; i <= clauseCount; ++i) {
-	pos1 = line.find("0", pos0);
-	clause[i] = line.substr(pos0, pos1 -pos0 -1);
-	std::cout << clause[i];
-	pos0 = pos1+1;
+        pos1 = line.find("0", pos0);
+        clause[i] = line.substr(pos0, pos1 -pos0 -1);
+        std::cout << clause[i];
+        pos0 = pos1+1;
       }
       std::cout << "\n\nSolution\n";
 
       for (int j = 0; j <= clauseCount; ++j)
-	if(clause[j].length() == 1) {
-	  watched = clause[j];
-	  std::cout << watched;
-	  clause[j] = "Currently being watched";
-	  for (int k = j; k <= 3; ++k)
-	    if(clause[k].find(watched)) clause[k] = "n";
-	  std::cout << clause[j];
-	}
+        if(clause[j].length() == 1) {
+          watched = clause[j];
+          std::cout << watched;
+          clause[j] = "Currently being watched";
+          for (int k = j; k <= 3; ++k)
+            if(clause[k].find(watched)) clause[k] = "n";
+          std::cout << clause[j];
+        }
       outFile.close();
     }
     else std::cout << "No good\n";
