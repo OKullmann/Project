@@ -1,0 +1,83 @@
+@article{JournalAlgorithms,
+  title="An algorithm for the satisﬁability problem of formulas in conjunctive normal form",
+  author="Rainer Schuler",
+  journal="Journal of Algorithms",
+  year="2004",
+  volume="54",
+  pages="40-44",
+  month="June"
+}
+@misc{Website:CNFFiles,
+    author="John Burkardt",
+    title="CNF Files",
+    month="May",
+    year="2008",
+    url="http://people.sc.fsu.edu/~jburkardt/data/cnf/cnf.html"
+}
+@misc{Website:CNF,
+    author="Justin R. Smith",
+    title="Conjunctive normal form",
+    month="April",
+    year="2001",
+    url="http://vorpal.math.drexel.edu/course/founds/proving/node1.html"
+}
+@techreport{onCNF,
+  title="On Conjunctive Normal Form Satisfiability",
+  author="Jon Freeman",
+  institution="University of Pennsylvania",
+  year="1991",
+}
+@article{TheoryBoolean,
+  title="An Extended Theory of Boolean Normal Forms",
+  author="Bernd Steinbach",
+  institution="Freiberg University of Mining and Technology",
+  year="2012",
+  month="October"
+}
+@misc{Website:GSAT,
+    author="",
+    title="Two incomplete methods: GSAT and Unit propagation",
+    month="",
+    year="",
+    url="http://www.dis.uniroma1.it/~liberato/ar/incomplete/incomplete.html"
+}
+@book{goossens93,
+    author    = "Hujun Yin and Peter Tino and Xin Yao and Emilio Corchado and Will Byrne",
+    title     = "Intelligent Data Engineering and Automated Learning",
+    year      = "2007",
+    publisher = "Springer",
+    pages= "390 - 392"
+}
+@misc{Website:UnitPropogation,
+    author="Matt Ginsberg",
+    title="Unit Propagation: The Inner Loop",
+    month="February",
+    year="2004",
+    url="http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/dixon04a-html/node3.html"
+}
+@article{MiniSAT,
+  title="An Extensible SAT-solver",
+  author="Niklas Een and Niklas Sorensson",
+  institution="Chalmers University of Tehnology, Sweden",
+  year="",
+  month=""
+}
+@article{UnitPropogation,
+  title="An efficient algorithm for unit propagation",
+  author="Hantao Zhangn",
+  institution="The University Of Iowa",
+  year="",
+  month=""
+}
+@article{UnitPropogation,
+  title="Fast Incremental Unit Propogation by Unifying Watched-literals and Local Repair",
+  author="Shen Qu",
+  institution="Massachusetts Institute of Technology",
+  year="2006",
+  month="September"
+}
+
+
+
+
+
