@@ -3,15 +3,15 @@
 #include <string>
 #include <sstream>
 
-int main(int argc, char *argv[]){
+int main(const int argc, const char* const argv[]){
   std::string line;
   std::string watched;
-  int clauseCount = 3;
+  const int clauseCount = 3;
 
   if (argc !=2) //If no file is entered for input
     std::cout << "Usage: " << "./UCP <Input filename>" << std::endl;
   else {
-    std::ifstream inFile (argv[1]);
+    const std::ifstream inFile (argv[1]);
     std::ofstream outFile;
     std::stringstream buffer;
 
