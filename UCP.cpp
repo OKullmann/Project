@@ -34,19 +34,15 @@ int main(const int argc, const char* const argv[]) {
       }
       std::cout << std::endl << std::endl << "Solution" << std::endl;
 
-      for (int j = 0; j <= clauseCount; j++) {
+      for (int j = 0; j <= clauseCount; j++)
 	if(clause[j].length() == 1) {
 	  watched = clause[j];
 	  std::cout << watched;
 	  clause[j] = "Currently being watched";
-	  for (int k = j; k <= 3; k++) {
-	    if(clause[k].find(watched)){
-	      clause[k] = "n";
-	    }
-	  }
+	  for (int k = j; k <= 3; k++)
+	    if(clause[k].find(watched)) clause[k] = "n";
 	  std::cout << clause[j];
 	}
-      }
       outFile.close();
     }
     else {
