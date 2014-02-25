@@ -10,7 +10,7 @@ int main(const int argc, const char* const argv[]) {
   const int clauseCount = 3;
 
   if (argc !=2)
-    std::cout << "Usage: " << "./UCP <Input filename>" << std::endl;
+    std::cout << "Usage: " << "./UCP <Input filename>\n";
   else {
     const std::ifstream inFile(argv[1]);
     std::ofstream outFile;
@@ -23,7 +23,7 @@ int main(const int argc, const char* const argv[]) {
       std::size_t pos1;
 
       outFile.open("output.txt");
-      std::cout << " ** FILE ** " << std::endl;
+      std::cout << " ** FILE ** \n";
       std::string clause[255];
       for (int i = 0; i <= clauseCount; ++i) {
 	pos1 = line.find("0", pos0);
@@ -31,7 +31,7 @@ int main(const int argc, const char* const argv[]) {
 	std::cout << clause[i];
 	pos0 = pos1+1;
       }
-      std::cout << std::endl << std::endl << "Solution" << std::endl;
+      std::cout << "\n\nSolution\n";
 
       for (int j = 0; j <= clauseCount; ++j)
 	if(clause[j].length() == 1) {
@@ -44,8 +44,6 @@ int main(const int argc, const char* const argv[]) {
 	}
       outFile.close();
     }
-    else {
-      std::cout << "No good" << std::endl;
-    }
+    else std::cout << "No good\n";
   }
 }
