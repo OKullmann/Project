@@ -4,6 +4,10 @@
 #include <sstream>
 #include <cstdlib>
 
+// TODOS:
+// 1. not "watched"
+// 2. use std::vector
+
 int main(const int argc, const char* const argv[]) {
   std::string line;
   std::string watched;
