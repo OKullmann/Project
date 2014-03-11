@@ -5,12 +5,11 @@
 #include <cstdlib>
 
 // TODOS:
-// 1. not "watched"
-// 2. use std::vector
+// 1. use std::vector
 
 int main(const int argc, const char* const argv[]) {
   std::string line;
-  std::string watched;
+  std::string propagated;
   const int clauseCount = 3;
 
   if (argc !=2)
@@ -39,11 +38,11 @@ int main(const int argc, const char* const argv[]) {
 
       for (int j = 0; j <= clauseCount; ++j)
         if(clause[j].length() == 1) {
-          watched = clause[j];
-          std::cout << watched;
-          clause[j] = "Currently being watched";
+          propagated = clause[j];
+          std::cout << propagated;
+          clause[j] = "Currently being propagated";
           for (int k = j; k <= 3; ++k)
-            if(clause[k].find(watched)) clause[k] = "n";
+            if(clause[k].find(propagated)) clause[k] = "n";
           std::cout << clause[j];
         }
       outFile.close();
