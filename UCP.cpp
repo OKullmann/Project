@@ -3,8 +3,8 @@
 #include <vector>
 
 int main(const int argc, const char* const argv[]) {
-  std::vector<std::string> comments;
   std::vector<std::string> clauses;	
+  std::ofstream outFile("output.txt");
   if (argc !=2)
     std::cout << "Usage: " << "./UCP <Input filename>\n";
   else{
@@ -14,7 +14,7 @@ int main(const int argc, const char* const argv[]) {
     while (std::getline(inFile, line)) {
       std::string c("c");
       if(line.compare(0, c.length(), c)==0)
-        comments.push_back(line);
+        outFile << line << "\n";
       else(clauses.push_back(line));
     }
   }
