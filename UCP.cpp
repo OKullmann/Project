@@ -16,6 +16,7 @@ int main(const int argc, const char* const argv[]) {
       if(line.compare(0, c.length(), c)==0)
         outFile << line << "\n";
       else(clauses.push_back(line));
-    }
+    } 
+    outFile << "c This file was propagated";  
   }
 }
