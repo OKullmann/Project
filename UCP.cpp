@@ -23,7 +23,11 @@ int main(const int argc, const char* const argv[]) {
   for (int i = 0; i < clauses.size(); ++i){
     int clauseCount = ((clauses[i].length() +1) / 2);
     if (clauseCount == 2){
-      std::cout << clauses[i];
+      size_t pos1 = 0;
+      size_t pos2;
+      pos2 = clauses[i].find(" ", pos1);
+      propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
+      std::cout << propagator;
     }
   }
 }
