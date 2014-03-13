@@ -19,9 +19,11 @@ int main(const int argc, const char* const argv[]) {
     } 
     outFile << "c This file has been propagated";
   }
-  for (int i = 0; i < 6; ++i){
+  std::string propagator;
+  for (int i = 0; i < clauses.size(); ++i){
     int clauseCount = ((clauses[i].length() +1) / 2);
-    if (clauseCount == 2)
-      std::cout << clauses[i] << "\n";
+    if (clauseCount == 2){
+      std::cout << clauses[i];
+    }
   }
 }
