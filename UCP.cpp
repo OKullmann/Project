@@ -17,6 +17,6 @@ int main(const int argc, const char* const argv[]) {
         outFile << line << "\n";
       else(clauses.push_back(line));
     } 
-    outFile << "c This file was propagated";  
+    outFile << "c This file has been propagated";
   }
 }
