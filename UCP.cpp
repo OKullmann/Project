@@ -3,10 +3,6 @@
 #include <vector>
 #include <algorithm>
 
-//TODO
-//1.Tweak remove_if to ensure working all the time
-//2.Implement printing vector to output file
-
 int main(const int argc, const char* const argv[]) {
   std::vector<std::string> clauses;	
   std::ofstream outFile("output.txt");
@@ -34,6 +30,7 @@ int main(const int argc, const char* const argv[]) {
         propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
         clauses.erase(
         std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
+        i = -1;
       }
       std::cout << "Currently propagating " << propagator << "\n";
     }
