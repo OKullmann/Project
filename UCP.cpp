@@ -28,11 +28,10 @@ int main(const int argc, const char* const argv[]) {
         size_t pos2;
         pos2 = clauses[i].find(" ", pos1);
         propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
-        clauses.erase(
-        std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
         i = -1;
       }
       std::cout << "Currently propagating " << propagator << "\n";
+      clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
     }
   }
 }
