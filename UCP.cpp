@@ -13,8 +13,8 @@ int main(const int argc, const char* const argv[]) {
   if (argc !=2)
     std::cout << "Usage: " << "./UCP <Input filename>\n";
   else{
+	std::cout << "File has been read in \n";
     std::ifstream inFile(argv[1]);
-    std::cout << "Cool \n";
     std::string line;
     while (std::getline(inFile, line)) {
       std::string c("c");
@@ -22,6 +22,7 @@ int main(const int argc, const char* const argv[]) {
         outFile << line << "\n";
       else(clauses.push_back(line));
     } 
+    std::cout << "Clauses added to vector \n";
     outFile << "c This file has been propagated";
     std::string propagator;
     for (int i = 0; i < clauses.size(); ++i){
@@ -34,6 +35,7 @@ int main(const int argc, const char* const argv[]) {
         clauses.erase(
         std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
       }
+      std::cout << "Currently propagating " << propagator << "\n";
     }
   }
 }
