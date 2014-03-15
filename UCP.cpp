@@ -29,7 +29,7 @@ int main(const int argc, const char* const argv[]) {
       if (clauseCount == 2){
         size_t pos1 = 0;
         size_t pos2;
-        pos2 = clauses[i].find(" ", pos1);
+        pos2 = clauses[i].find(" " || "	", pos1);
         propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
         i = -1;
       }
