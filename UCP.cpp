@@ -3,6 +3,10 @@
 #include <vector>
 #include <algorithm>
 
+//TODO
+//1.Tweak remove_if to ensure working all the time
+//2.Implement printing vector to output file
+
 int main(const int argc, const char* const argv[]) {
   std::vector<std::string> clauses;	
   std::ofstream outFile("output.txt");
