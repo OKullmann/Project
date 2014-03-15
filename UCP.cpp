@@ -14,12 +14,15 @@ int main(const int argc, const char* const argv[]) {
     std::string line;
     while (std::getline(inFile, line)) {
       std::string c("c");
+      std::string p("p");
       if(line.compare(0, c.length(), c)==0)
+        outFile << line << "\n";
+      else if(line.compare(0, p.length(), p)==0)
         outFile << line << "\n";
       else(clauses.push_back(line));
     } 
     std::cout << "Clauses added to vector \n";
-    outFile << "c This file has been propagated";
+    outFile << "c This file has been propagated \n";
     std::string propagator;
     for (int i = 0; i < clauses.size(); ++i){
       int clauseCount = ((clauses[i].length() +1) / 2);

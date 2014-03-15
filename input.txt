@@ -1,0 +1,7 @@
+c Test comment line
+c second comment line for fun
+p cnf 3 2
+-1 0
+-1 2 0
+2 3 5 0
+3 5 0
