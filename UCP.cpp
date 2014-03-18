@@ -22,15 +22,16 @@ int main(const int argc, const char* const argv[]) {
       else(clauses.push_back(line));
     } 
     std::cout << "Clauses added to vector \n";
-    outFile << "c This file has been propagated \n";
+    outFile << "c This file has been propagated \n" << "c Solution: ";
     std::string propagator;
     for (int i = 0; i < clauses.size(); ++i){
       int clauseCount = ((clauses[i].length() +1) / 2);
       if (clauseCount == 2){
         size_t pos1 = 0;
         size_t pos2;
-        pos2 = clauses[i].find(" " || "	", pos1);
+        pos2 = clauses[i].find(" ", pos1);
         propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
+        outFile << propagator << " ";
         i = -1;
       }
       std::cout << "Currently propagating " << propagator << "\n";
