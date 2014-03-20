@@ -40,11 +40,12 @@ int main(const int argc, const char* const argv[]) {
         propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
         outFile << propagator << " ";
         i = -1;
+        std::cout << "Currently propagating " << propagator << "\n";
       }
       numspaces = 0;
-      std::cout << "Currently propagating " << propagator << "\n";
       clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
     }
+
     for (const auto &clause : clauses)
       outFile << clause << '\n';
   }
