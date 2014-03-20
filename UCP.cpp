@@ -23,10 +23,17 @@ int main(const int argc, const char* const argv[]) {
     } 
     std::cout << "Clauses added to vector \n";
     outFile << "c This file has been propagated \n" << "c Solution: ";
-    std::string propagator;
-    for (int i = 0; i < clauses.size(); ++i){
-      int clauseCount = ((clauses[i].length() +1) / 2);
-      if (clauseCount == 2){
+    std::string propagator, mString;
+    int numspaces = 0;
+	char nextChar;//Everything below here
+    for (int i=0; i<int(clauses.size()); i++){
+	mString = clauses[i];
+      for (int j=0; j<mString.length(); j++){
+	    nextChar = mString.at(j);
+	    if (isspace(mString[j]))
+	      numspaces++;
+      }
+      if(numspaces == 1){
         size_t pos1 = 0;
         size_t pos2;
         pos2 = clauses[i].find(" ", pos1);
@@ -34,6 +41,7 @@ int main(const int argc, const char* const argv[]) {
         outFile << propagator << " ";
         i = -1;
       }
+      numspaces = 0;
       std::cout << "Currently propagating " << propagator << "\n";
       clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
     }
