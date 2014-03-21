@@ -25,7 +25,7 @@ int main(const int argc, const char* const argv[]) {
     outFile << "c This file has been propagated \n" << "c Solution: ";
     std::string propagator, mString;
     int numspaces = 0;
-	char nextChar;//Everything below here
+	char nextChar;
     for (int i=0; i<int(clauses.size()); i++){
 	mString = clauses[i];
       for (int j=0; j<mString.length(); j++){
@@ -45,8 +45,8 @@ int main(const int argc, const char* const argv[]) {
       numspaces = 0;
       clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
     }
-
+    outFile << "\n";
     for (const auto &clause : clauses)
-      outFile << clause << '\n';
+      outFile << clause << "\n";
   }
 }
