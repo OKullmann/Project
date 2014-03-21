@@ -3,6 +3,9 @@
 #include <vector>
 #include <algorithm>
 
+//Reminder
+//Switch the order of propagation, single variable first then full clause
+
 int main(const int argc, const char* const argv[]) {
   std::vector<std::string> clauses;	
   std::ofstream outFile("output.txt");
