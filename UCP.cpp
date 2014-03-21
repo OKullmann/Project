@@ -58,6 +58,14 @@ int main(const int argc, const char* const argv[]) {
           secondClause = 0;
           }
       }
+      for (int i=0; i<int(clauses.size()); i++){
+	    std::string nString = clauses[i];
+	    int pos3 = nString.find(propagator);
+	    if(pos3 >= 0){
+	      nString.replace(pos3,propagator.size(),"");
+	      clauses[i] = nString;
+	      }
+	    }
       numspaces = 0;
     }
     outFile << "\n";
