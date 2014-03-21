@@ -50,13 +50,13 @@ int main(const int argc, const char* const argv[]) {
         int pos = propagator.find(dash);
         if(pos!=std::string::npos){
           propagator.replace(pos,dash.size(),"");
+          propagator = propagator += " ";
           secondClause = 0;
           }
         else{
-          propagator = dash += propagator;
+          propagator = dash += propagator += " ";
           secondClause = 0;
           }
-        std::cout << propagator << "new \n";
       }
       numspaces = 0;
     }
