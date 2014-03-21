@@ -33,6 +33,7 @@ int main(const int argc, const char* const argv[]) {
 	    if (isspace(mString[j]))
 	      numspaces++;
       }
+      int secondClause;
       if(numspaces == 1){
         size_t pos1 = 0;
         size_t pos2;
@@ -41,9 +42,23 @@ int main(const int argc, const char* const argv[]) {
         outFile << propagator << " ";
         i = -1;
         std::cout << "Currently propagating " << propagator << "\n";
+        secondClause = 1;
+      }
+      clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
+      if(secondClause == 1){
+	    std::string dash = "-";
+        int pos = propagator.find(dash);
+        if(pos!=std::string::npos){
+          propagator.replace(pos,dash.size(),"");
+          secondClause = 0;
+          }
+        else{
+          propagator = dash += propagator;
+          secondClause = 0;
+          }
+        std::cout << propagator << "new \n";
       }
       numspaces = 0;
-      clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
     }
     outFile << "\n";
     for (const auto &clause : clauses)
