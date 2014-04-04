@@ -48,7 +48,7 @@ int main(const int argc, const char* const argv[]) {
         std::cout << "Currently propagating " << propagator << "\n";
         secondClause = 1;
       }
-      clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(propagator) != std::string::npos;}),clauses.end());
+      clauses.erase(std::remove_if(clauses.begin(), clauses.end(),[&](const std::string &s) {return s.find(space + propagator + space) != std::string::npos;}),clauses.end());
       if(secondClause == 1){
 	    std::string dash = "-";
         int pos = propagator.find(dash);
