@@ -54,11 +54,11 @@ int main(const int argc, const char* const argv[]) {
         int pos = propagator.find(dash);
         if(pos!=std::string::npos){
           propagator.replace(pos,dash.size(),"");
-          propagator = propagator += " ";
+          propagator = space + propagator;
           secondClause = 0;
           }
         else{
-          propagator = dash += propagator += " ";
+          propagator = space + dash + propagator ;
           secondClause = 0;
           }
       }
