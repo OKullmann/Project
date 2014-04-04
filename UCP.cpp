@@ -38,11 +38,11 @@ int main(const int argc, const char* const argv[]) {
 	      numspaces++;
       }
       int secondClause;
-      if(numspaces == 1){
-        size_t pos1 = 0;
+      if(numspaces == 2){
+        size_t pos1 = 1;
         size_t pos2;
         pos2 = clauses[i].find(" ", pos1);
-        propagator = clauses[i].substr(pos1, (pos2 - pos1)); 
+        propagator = clauses[i].substr(pos1, (pos2 - pos1));
         outFile << propagator << " ";
         i = -1;
         std::cout << "Currently propagating " << propagator << "\n";
