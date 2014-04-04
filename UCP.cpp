@@ -75,5 +75,7 @@ int main(const int argc, const char* const argv[]) {
     outFile << "\n";
     for (const auto &clause : clauses)
       outFile << clause << "\n";
+    if(propagator.isEmpty())
+      outFile << "Propagation not possible";
   }
 }
