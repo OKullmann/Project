@@ -7,6 +7,12 @@
   pages="40-44",
   month="June"
 }
+@unpublished{SatSuggestedFormat,
+  title=’”Satisfiability Suggested Format”,
+  Author=“Domagoj Babic”,
+  year=“1993”,
+  month=“May”
+}
 @misc{Website:CNFFiles,
     author="John Burkardt",
     title="CNF Files",
@@ -14,7 +20,24 @@
     year="2008",
     url="http://people.sc.fsu.edu/~jburkardt/data/cnf/cnf.html"
 }
-@misc{Website:CNF,
+@conference{FastDecision,
+  title="Using a SAT Solver as a Fast Decision Procedure for Propositional Logic in an LCF-style Theorem Prover",
+  author=“Tjark Weber”,
+  journal=“Theorem Proving in Higher Order Logics: Emerging Trends Proceedings,
+  year="2005”,
+  volume=“3603”,
+  pages=“180-189”,
+  month=“August”,
+  institution=“Oxford University Computing Laboratory”
+}
+@misc{Website:Conjunctive Normal Form,
+    author=“Weisstein, Eric W”,
+    title="Conjunctive Normal Form",
+    month=“December”,
+    year="2013”,
+    url="http://mathworld.wolfram.com/ConjunctiveNormalForm.html"
+}
+@misc{Website:CNFWolfram,
     author="Justin R. Smith",
     title="Conjunctive normal form",
     month="April",
@@ -76,8 +99,47 @@
   year="2006",
   month="September"
 }
-
-
+@misc{Website:UnitPropagation,
+    author=“David “Bremner,
+    title="UnitPropagation",
+    month=“April”,
+    year=“2013”,
+    url="https://www.cs.unb.ca/~bremner/teaching/cs3383/lectures/unit_propagation/"
+}
+@article{WhatIsC++0x,
+  title=“What Is c++0x”,
+  author="Bjarne Stroustrup",
+  year=“2009”,
+  month=“October”
+}
+@article{LoopRecognition,
+  title=“Loop Recognition in C++/Java/Go/Scala”,
+  author=“Robert Hundt”,
+  institution”Google”’
+  year=“2011”,
+  month=“September”
+}
+@misc{Website:GCC,
+    title=“GCC”,
+    month=“March”,
+    year=“2014”,
+    url="http://gcc.gnu.org/"
+}
+@manual{GCCManual,
+  author=“Richard M, Stallman and the GCC Developer Community”,
+  edition=“GCC 4.8.2”,
+  month=“October”,
+  organisation=“GCC”,
+  title=“Using the GNU Compiler Collection”
+}
+@article{Contrasat,
+    author="Allen Van Gelder",
+    title="Contrasat – A Contrarian SAT Solver",
+    journal=“Journal on Satisﬁability, Boolean Modeling and Computation",
+    volume=“8”,
+    pages=“117” - 122,
+    year=“2012”
+}
 
 
 
