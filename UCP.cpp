@@ -15,6 +15,7 @@ int main(const int argc, const char* const argv[]) {
 	std::cout << "File has been read in \n";
     std::ifstream inFile(argv[1]);
     std::string line;
+    std::string space = " ";
     while (std::getline(inFile, line)) {
       std::string c("c");
       std::string p("p");
@@ -22,7 +23,7 @@ int main(const int argc, const char* const argv[]) {
         outFile << line << "\n";
       else if(line.compare(0, p.length(), p)==0)
         outFile << line << "\n";
-      else(clauses.push_back(line));
+      else(clauses.push_back(space + line));
     } 
     std::cout << "Clauses added to vector \n";
     outFile << "c This file has been propagated \n" << "c Solution: ";
@@ -41,7 +42,7 @@ int main(const int argc, const char* const argv[]) {
         size_t pos1 = 0;
         size_t pos2;
         pos2 = clauses[i].find(" ", pos1);
-        propagator = clauses[i].substr(pos1, (pos2 -pos1)); 
+        propagator = clauses[i].substr(pos1, (pos2 - pos1)); 
         outFile << propagator << " ";
         i = -1;
         std::cout << "Currently propagating " << propagator << "\n";
