@@ -1,13 +1,15 @@
-Project
+Unit Clause Propagation in C++11
 =======
 
-Unit clause propagation algorithm for 4th year MEng project
+Unit clause propagation algorithm for 4th year MEng project written in C++11
+
+Makefile is provided for compilation.
 
 The program takes in a text file as input using the command:
 
 ./UCP input.txt
 
-The file should be CNF in the DIMACS format. For example 
+The file should be CNF in the DIMACS format. For example:
 
 c Comment line describing the file
 p CNF 2 2
@@ -24,6 +26,6 @@ p cnf 2 2
 c This file has been propagated 
 c Solution: 1
 
-The solution line will show each solution that had been found while propagating the file
+The solution line will show each solution that had been found while propagating the file.
 
-This code is still a work in progress, and is being updated as much as possible for submission in June
+This code is still a work in progress, and is being updated as much as possible for submission in June.
