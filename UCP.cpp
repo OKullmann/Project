@@ -58,7 +58,7 @@ int main(const int argc, const char* const argv[]) {
           secondClause = 0;
           }
         else{
-          propagator = space + dash + propagator ;
+          propagator = space + dash + propagator;
           secondClause = 0;
           }
       }
@@ -75,7 +75,7 @@ int main(const int argc, const char* const argv[]) {
     outFile << "\n";
     for (const auto &clause : clauses)
       outFile << clause << "\n";
-    if(propagator.isEmpty())
+    if(propagator.empty())
       outFile << "Propagation not possible";
   }
 }
