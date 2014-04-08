@@ -1,0 +1,21 @@
+8/4/2014:
+
+1. See tawSolver.
+
+2. Remove superfluous output.
+
+3. Correct position of comments.
+
+4. Improving output of unit-propagated assignments.
+
+5. Input/output by default from standard input/output.
+
+6. Tickets
+
+Testing/001 : false comments
+002: error
+003: update p-line
+
+7. Proper datastructures (strings are for text).
+
+Literals, clauses, clause-lists.
