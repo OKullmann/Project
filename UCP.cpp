@@ -54,11 +54,11 @@ int main(const int argc, const char* const argv[]) {
         int pos = propagator.find(dash);
         if(pos!=std::string::npos){
           propagator.replace(pos,dash.size(),"");
-          propagator = space + propagator;
+          propagator = space + propagator + space;
           secondClause = 0;
           }
         else{
-          propagator = space + dash + propagator;
+          propagator = space + dash + propagator + space;
           secondClause = 0;
           }
       }
@@ -66,13 +66,14 @@ int main(const int argc, const char* const argv[]) {
 	    std::string nString = clauses[i];
 	    int pos3 = nString.find(propagator);
 	    if(pos3 >= 0){
-	      nString.replace(pos3,propagator.size(),"");
+	      nString.replace(pos3,propagator.size()," ");
 	      clauses[i] = nString;
 	      }
 	    }
       numspaces = 0;
     }
     outFile << "\n";
+    std::cout << "Currently printing to output file";
     for (const auto &clause : clauses)
       outFile << clause << "\n";
     if(propagator.empty())
